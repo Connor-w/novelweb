@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block css %}
+
+    <style>
+
+        iframe {
+            width: 340px;
+            height: 240px;
+        }
+
+        #bigger {
+            {#display: none;#}
+        }
+        #small123 {
+            display: block;
+        }
+
+        .col-md-12 iframe {
+            width: 1125px;
+            height: 750px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container" id="bigger">
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <iframe src="//player.bilibili.com/player.html?aid={{ video_lis.0.aid }}&cid={{ video_lis.0.cid }}&page=1"
+                        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                <br>
+                <span><a href="/book/search/{{ video_lis.0.book_name }}.html" class="btn btn-primary">阅读小说</a>
+                    <a href="" class="small btn btn-primary">回到视频列表</a></span>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="small123">
+        <br>
+        <div class="row news-grids" >
+            {% for obj in video_lis %}
+
+                <div class="col-lg-4 news-grids-left">
+                    <div class="news_top" style="float: left">
+                        <div style="text-align: center;font-size: 22px;color: yellow">{{ obj.book_name  }}</div>
+                        <iframe src="//player.bilibili.com/player.html?aid={{ obj.aid }}&cid={{ obj.cid }}&page=1"
+                                scrolling="no" border="0" frameborder="no" framespacing="0"
+                                allowfullscreen="true"></iframe>
+                        <br>
+                        <span><a href="/book/search/{{ obj.book_name }}.html" class="btn btn-primary">阅读小说</a>&nbsp</span>
+                        <div class="bigger btn btn-primary">放大观看</div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            {% endfor %}
+             <hr>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{% block js %}
+
+    <script>
+        $('.small').click(function () {
+        console.log('qqqqqqqqqqq');
+        $('#small123').show();
+        $('#bigger').hide();
+        });
+
+
+        $('.bigger').click(function () {
+            $('#small123').hide();
+            $('#bigger').show();
+        });
+    </script>
+
+
+{% endblock %}

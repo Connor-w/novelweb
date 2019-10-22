@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="referrer" content="never" charset="UTF-8">
+    <title>c享小说网</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+            src="http://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/media/static/images/sm_log.png" type="image/x-icon"/>
+    <link type="text/css" rel="stylesheet" href="/media/static/css/basic.css">
+
+    <style>
+        #info {
+            padding-left: 260px;
+            padding-top: 50px;
+        }
+        body {
+            background-image: url("/media/static/images/峡谷深蓝.jpeg");
+            background-size: 100%;
+            background-attachment: fixed;
+
+        }
+
+
+    </style>
+    {% block css %}
+
+    {% endblock %}
+</head>
+<body>
+<div id="topOne">
+
+</div>
+<div id="Top">
+    <div class="logo"><a href="#"><img src="/media/static/images/big_logo.png" width="200px" height="50px"/></a>
+    </div>
+    <div class="search">
+        <form action="/book/search/.html" method="post" >
+            <div id="searchTxt" class="searchTxt" style="width: 401px;height: 34px">
+
+                <div class="searchMenu" style="width: 68px;height: 30px">
+
+                    <div class="searchSelected" id="searchSelected">小说</div>
+                    <input id="type1" name="choice" style="display:none;" type="text" value="">
+
+                    <div style="display:none;" class="searchTab" id="searchTab">
+
+                        <ul>
+                            <li class="">小说</li>
+                            <li>作者</li>
+
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+
+                <input name="name" style="width: 245px;height: 30px" type="text"/>
+                <div class="searchBtn" style="margin-top: -2px">
+                    <button id="searchBtn" type="submit">搜索</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="user" style="font-size: 22px;color: #c4ffbe ;">
+            {% if request.user.is_authenticated %}
+                <font><a href="/user/site.html">{{ request.user.username }}的个人中心&nbsp;&nbsp;&nbsp;|</a></font>
+                <font><a href="/user/loginout">退出登录</a></font>
+
+            {% else %}
+                <font><a href="/user/login.html">登录&nbsp;&nbsp;&nbsp;|</a></font>
+                <font><a href="/user/register.html">注册</a></font>
+            {% endif %}
+
+
+        </div>
+</div>
+
+
+<div id="Logo">
+    <ul>
+        <li class="first"><span class="iconfont">&#xe627;</span>以下为{{ category_name }}</li>
+        <li><a href="/" title="首页">首页</a></li>
+        <li><a href="/book/category/1.html" >穿越</a></li>
+        <li><a href="/book/category/2.html">网游</a></li>
+        <li><a href="/book/category/3.html">科幻</a></li>
+        <li><a href="/book/category/4.html">玄幻</a></li>
+        <li><a href="#">游戏</a></li>
+        <li><a href="#">历史</a></li>
+        <li class="last"></li>
+    </ul>
+</div>
+
+<br>
+
+{% block content %}
+
+{% endblock %}
+<div class="Footer">
+    <div class="footer_nav">
+        <a>关于c享</a>&#12288;|&#12288;
+        <a>商务合作</a>&#12288;|&#12288;
+        <a>友情链接</a>&#12288;|&#12288;
+        <a>帮助中心</a>&#12288;|&#12288;
+        <a>用户守则</a>&#12288;|&#12288;
+        <a>网站地图</a>&#12288;|&#12288;
+        <a>诚聘精英</a>&#12288;|&#12288;
+        <a>c享开源</a>
+    </div>
+    <p><a>Copyright (C) 2018-2019 www.connorshare.top All Rights Reserved </a>
+        <br/>
+        等在线小说阅读网站，未经许可不得擅自转载本站内容。
+        c享小说网所收录免费小说作品、社区话题、书友评论、用户上传文字、图片等其他一切内容均属用户个人行为，与c享小说网无关。-- c享权利声明。
+    </p>
+    <!--引用外部jquery文件-->
+    <script type="text/javascript" src="/media/static/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/media/static/js/index.js"></script>
+    <script src="../media/static/js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        {#获取选择搜索的对象是作者还是小说#}
+        let a=$('#searchSelected').text();
+        $('#type1').val(a);
+        $('#searchTab').click(function () {
+            let a=$('#searchSelected').text();
+            $('#type1').val(a);
+
+        });
+
+        $(".faceul_zero img").hover(function () {
+            $(this).addClass("hoverstyle_zero");
+        }, function () {
+            $(this).removeClass("hoverstyle_zero");
+        });
+        $(".infoBox img").hover(function () {
+            $(this).addClass("hoverstyle_one");
+        }, function () {
+            $(this).removeClass("hoverstyle_one");
+        });
+        $("img.prev").click(function () {
+
+            $(".imgList ul").animate({"left": -280}, 500, function () {
+                $(this).append($(this).find("li:first"));
+                $(this).css("left", 0);
+            });
+
+        });
+
+        $("img.next").click(function () {
+
+            autoPlay();
+
+        });
+
+        var cleartime = setInterval(autoPlay, 2000);
+        //鼠标放上去，停止播入
+        $("img.next,img.prev").hover(function () {
+            clearInterval(cleartime);
+        }, function () {
+            cleartime = setInterval(autoPlay, 3000);
+        });
+
+        function autoPlay() {
+
+            $(".imgList ul").prepend($(".imgList ul li:last"));
+            $(".imgList ul").css("left", -280);
+            $(".imgList ul").animate({"left": 0}, 500);
+        }
+
+        //鼠标导航滑块跟随效果
+
+        $(".PartM ul li:nth-of-type(n)").hover(function () {
+            $(".PartM ul li:nth-of-type(n)").css({"background": "#efefef", "color": "#666"});
+            $(this).css({"width": "100%", "background": "#00A1D2", "border": "none"});
+        });
+
+        //图片选项卡
+        $(function () {
+            $(".PartR>div").hide();
+            $(".PartR>div:eq(0)").show();
+
+            $(".PartM a").click(function () {
+                var n = $(".PartM a").index(this);
+                $(".PartM a").index(this);
+                $(".PartR>div").hide();
+                $(".PartR>div:eq(" + n + ")").show();
+            })
+
+
+        })
+
+
+        //下拉
+        $(function () {
+
+            $("#searchSelected").click(function () {
+                $("#searchTab").show();
+                $(this).addClass("searchOpen");
+            });
+
+            $("#searchTab li").hover(function () {
+                $(this).addClass("selected");
+            }, function () {
+                $(this).removeClass("selected");
+            });
+
+            $("#searchTab li").click(function () {
+                $("#searchSelected").html($(this).html());
+                $("#searchTab").hide();
+                $("#searchSelected").removeClass("searchOpen");
+            });
+
+        });
+
+        //图片缩放
+        $(".book ul img").mouseenter(function () {
+            $(this).animate({width: "110%"}, "slow");
+        });
+        $(".book ul img").mouseleave(function () {
+            $(this).animate({width: "80%"}, "slow");
+        });
+
+
+    </script>
+
+    {% block js %}
+
+    {% endblock %}
+</body>
+
+</html>

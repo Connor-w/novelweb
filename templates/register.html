@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+     <link rel="shortcut icon" href="/media/static/images/sm_log.png" type="image/x-icon" />
+    <title>c享注册</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+            src="http://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("/media/static/圣诞老人.jpg");
+            background-repeat: no-repeat;
+        }
+        .container {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 class="text-center">注册</h1>
+            <hr>
+            <form id="myform" novalidate>
+                {% csrf_token %}
+                {% for foo in form_obj %}
+                    <div class="form-group">
+                            <label for="{{ foo.auto_id }}">{{ foo.label }}</label>
+                            {{ foo }}
+                            <span class="pull-right" style="color: red"></span>
+                    </div>
+                {% endfor %}
+                <div class="form-group">
+                    <label for="id_file">头像
+                    <img src="/media/avatar/default.jpg" alt="" width="80" style="margin-left: 20px" id="id_img">
+                    </label>
+                    <input type="file" name="myfile" id="id_file" class="hidden">
+                </div>
+                <input type="button" class="btn btn-success pull-right" value="注册" id="id_submit">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $("#id_file").change(function () {
+        // 获取文件对象
+        var fileObj = $(this)[0].files[0];
+        // 利用内置对象 文件阅读器 FileReader
+        var fileReader = new FileReader();
+        // 将文件对象交给文件阅读器 生成文件对象的二进制数据
+        fileReader.readAsDataURL(fileObj);  // 异步
+        // DOM操作 修改img标签的src属性值
+        fileReader.onload = function (){
+            $('#id_img').attr('src',fileReader.result)
+        }
+    });
+
+    // 点击注册按钮 触发点击事件
+    $('#id_submit').click(function () {
+        // 利用内置对象FormData完成既有普通键值又有文件数据的发送
+        var formData = new FormData();
+        // 添加普通键值对
+        // formData.append('','')
+        // console.log($('#myform').serializeArray());  // 会将form标签内 普通的键值对 自动组成一个数组的形式返回给你
+        $.each($('#myform').serializeArray(),function (index,obj) {  // $.each(你想要被循环的对象，函数(索引，单个单个的对象))
+            // console.log(index,obj)
+            formData.append(obj.name,obj.value)  // 仅仅是将普通的键值对添加进去
+        });
+        // 添加文件数据
+        formData.append('my_avatar',$('#id_file')[0].files[0]);
+        // ajax发送
+        $.ajax({
+            url:'',
+            type:'post',
+            data:formData,
+
+            contentType:false,
+            processData:false,
+
+            success:function (data) {
+                if (data.code==2000){
+                    location.href = data.url
+                }else{
+                    // console.log(data.msg)
+                    $.each(data.msg,function (index,obj) {
+                        {#console.log(index,obj)#}
+                        var targetId = '#id_' + index;
+                        $(targetId).next().html(obj[0]).parent().addClass('has-error')
+                    })
+                }
+            }
+        })
+    });
+
+    // input框获取焦点事件
+    $('input').focus(function () {
+        // 将当前input所在的div移除has-error属性 并将下面的span标签内的内容也移除了
+        $(this).next().html('').parent().removeClass('has-error')
+    })
+
+</script>
+</body>
+</html>

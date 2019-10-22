@@ -1,0 +1,398 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"#}
+{#          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">#}
+{#    <script#}
+{#            src="http://code.jquery.com/jquery-1.12.4.js"#}
+{#            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="#}
+{#            crossorigin="anonymous"></script>#}
+{#    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"#}
+{#            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"#}
+{#            crossorigin="anonymous"></script>#}
+{#    <style>#}
+{##}
+{#        .book-information {#}
+{#            position: relative;#}
+{#            z-index: 2;#}
+{#            margin-bottom: 30px;#}
+{#            padding-bottom: 20px;#}
+{#            background: #fff;#}
+{#        }#}
+{##}
+{#        .cf {#}
+{#            zoom: 1;#}
+{#        }#}
+{##}
+{#        a, blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {#}
+{#            margin: 0;#}
+{#            padding: 0;#}
+{#        }#}
+{##}
+{#        div {#}
+{#            display: block;#}
+{#        }#}
+{##}
+{#        body {#}
+{#            font-family: PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;#}
+{#            text-align: left;#}
+{#            color: #262626;#}
+{#            background: #fff;#}
+{#            -webkit-font-smoothing: antialiased;#}
+{#            -moz-font-smoothing: antialiased;#}
+{#        }#}
+{##}
+{#        html {#}
+{#            color: -internal-root-color;#}
+{#        }#}
+{##}
+{#        .cf:after, .cf:before {#}
+{#            display: table;#}
+{#            content: '';#}
+{#        }#}
+{##}
+{#        .cf:after {#}
+{#            clear: both;#}
+{#        }#}
+{##}
+{#        .cf:after, .cf:before {#}
+{#            display: table;#}
+{#            content: '';#}
+{#        }#}
+{#    </style>#}
+{#</head>#}
+{#<body>#}
+{#<div class="book-information cf" data-l1="2">#}
+{##}
+{##}
+{#    <div class="book-img">#}
+{#        <a class="J-getJumpUrl" id="bookImg" href="//read.qidian.com/chapter/nTjeEvGj44M1/sicxPCtPFYWaGfXRMrUjdw2"#}
+{#           data-eid="qd_G09" data-bid="3679158"#}
+{#           data-firstchapterjumpurl="//read.qidian.com/chapter/nTjeEvGj44M1/sicxPCtPFYWaGfXRMrUjdw2"><img src="/media/{{ book.book_cover }}"></a>#}
+{#    </div>#}
+{##}
+{#    <div class="book-info ">#}
+{#        <h1>#}
+{##}
+{#            <em>{{ book.book_title  }}</em>#}
+{#            <span><a class="writer" href="//me.qidian.com/authorIndex.aspx?id=3503784" target="_blank"#}
+{#                     data-eid="qd_G08">{{ book.author.author_name }}</a> 著</span>#}
+{##}
+{#        </h1>#}
+{#        <p class="tag"><span class="blue">完本</span>#}
+{##}
+{#            <span class="blue">签约</span>#}
+{##}
+{##}
+{#            <span class="blue">VIP</span>#}
+{##}
+{#            <a href="//www.qidian.com/dushi" class="red" target="_blank" data-eid="qd_G10">都市</a>#}
+{##}
+{##}
+{#            <a href="//www.qidian.com/all?chanId=4&amp;subCateId=74" class="red" target="_blank"#}
+{#               data-eid="qd_G11">异术超能</a>#}
+{##}
+{##}
+{#        </p>#}
+{##}
+{#        <p class="intro">{{ book.book_brief }}</p>#}
+{#        <p><em>#}
+{#            <style>@font-face {#}
+{#                font-family: OehUcQZR;#}
+{#                src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.eot?') format('eot');#}
+{#                src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.ttf') format('truetype');#}
+{#            }#}
+{##}
+{#            .OehUcQZR {#}
+{#                font-family: 'OehUcQZR' !important;#}
+{#                display: initial !important;#}
+{#                color: inherit !important;#}
+{#                vertical-align: initial !important;#}
+{#            }</style>#}
+{#            <span class="OehUcQZR">𘠿𘡃𘡉𘡅𘡄</span></em><cite>万字</cite><i>|</i>#}
+{#            <!-- <em>-1</em><cite>阅文总点击</cite><i>|</i>#}
+{#            <em><style>@font-face { font-family: OehUcQZR; src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.eot?') format('eot'); src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.ttf') format('truetype'); } .OehUcQZR { font-family: 'OehUcQZR' !important;     display: initial !important; color: inherit !important; vertical-align: initial !important; }</style><span class="OehUcQZR">&#100423;&#100422;&#100417;</span></em><cite>会员周点击</cite><i>|</i> -->#}
+{#            <em>#}
+{#                <style>@font-face {#}
+{#                    font-family: OehUcQZR;#}
+{#                    src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.eot?') format('eot');#}
+{#                    src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.ttf') format('truetype');#}
+{#                }#}
+{##}
+{#                .OehUcQZR {#}
+{#                    font-family: 'OehUcQZR' !important;#}
+{#                    display: initial !important;#}
+{#                    color: inherit !important;#}
+{#                    vertical-align: initial !important;#}
+{#                }</style>#}
+{#                <span class="OehUcQZR">𘡇𘡉𘡁𘡃</span></em><cite>万总推荐</cite><i>|</i><em>#}
+{#                <style>@font-face {#}
+{#                    font-family: OehUcQZR;#}
+{#                    src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.eot?') format('eot');#}
+{#                    src: url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.woff') format('woff'), url('https://qidian.gtimg.com/qd_anti_spider/OehUcQZR.ttf') format('truetype');#}
+{#                }#}
+{##}
+{#                .OehUcQZR {#}
+{#                    font-family: 'OehUcQZR' !important;#}
+{#                    display: initial !important;#}
+{#                    color: inherit !important;#}
+{#                    vertical-align: initial !important;#}
+{#                }</style>#}
+{#                <span class="OehUcQZR">𘡁𘡅</span></em><cite>周推荐</cite></p>#}
+{##}
+{#        <p><a class="red-btn J-getJumpUrl " href="//read.qidian.com/chapter/nTjeEvGj44M1/sicxPCtPFYWaGfXRMrUjdw2"#}
+{#              id="readBtn" data-eid="qd_G03" data-bid="3679158"#}
+{#              data-firstchapterjumpurl="//read.qidian.com/chapter/nTjeEvGj44M1/sicxPCtPFYWaGfXRMrUjdw2">免费试读</a><a#}
+{#                class="blue-btn add-book" id="addBookBtn" href="javascript:" data-eid="qd_G05" data-bookid="3679158"#}
+{#                data-bid="3679158">加入书架</a>#}
+{##}
+{#            <a class="blue-btn" id="topVoteBtn" href="javascript:" data-showtype="1" data-eid="qd_G06">投票互动</a>#}
+{##}
+{#            <a class="blue-btn" id="downloadAppBtn" href="https://www.yuewen.com/app.html#appqd"#}
+{#               style="line-height: 26px;">手机App阅读</a>#}
+{#        </p>#}
+{##}
+{#    </div>#}
+{##}
+{#    <div class="comment-wrap">#}
+{#        <div id="commentWrap">#}
+{##}
+{#            <div class="j_getData hidden" style="display: block;">#}
+{#                <h4 id="j_bookScore"><b>暂无评分</b></h4>#}
+{#                <p id="j_userCount">少于10人评价</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!--#}
+{#        <h5>我要评价</h5>#}
+{#        <div class="score-mid" id="scoreBtn" data-score="" data-comment="0" data-eid="qd_G12">#}
+{##}
+{#            <img src="//qidian.gtimg.com/qd/images/book_details/star-off.b2a1b.png">#}
+{##}
+{#            <img src="//qidian.gtimg.com/qd/images/book_details/star-off.b2a1b.png">#}
+{##}
+{#            <img src="//qidian.gtimg.com/qd/images/book_details/star-off.b2a1b.png">#}
+{##}
+{#            <img src="//qidian.gtimg.com/qd/images/book_details/star-off.b2a1b.png">#}
+{##}
+{#            <img src="//qidian.gtimg.com/qd/images/book_details/star-off.b2a1b.png">#}
+{##}
+{#        </div>#}
+{#         -->#}
+{#    </div>#}
+{#    <div class="take-wrap">#}
+{##}
+{##}
+{#        <a class="blue" id="subscribe" href="javascript:" data-eid="qd_G13"><em class="iconfont"></em>订阅</a>#}
+{##}
+{##}
+{#    </div>#}
+{##}
+{##}
+{#</div>#}
+{#</body>#}
+{##}
+{#</html>#}
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta name="referrer" content="never" charset="UTF-8">
+    <title>c享小说网</title>
+    <link rel="shortcut icon" href="/media/static/images/sm_log.png" type="image/x-icon"/>
+    <link type="text/css" rel="stylesheet" href="/media/static/css/basic.css">
+    <style>
+        #info {
+            padding-left: 260px;
+            padding-top: 50px;
+        }
+    </style>
+
+    <div id="topOne">
+
+    </div>
+    <div id="Top">
+        <div class="logo"><a href="#"><img src="/media/static/images/big_logo.png" width="200px" height="50px"/></a>
+        </div>
+        <div class="search">
+            <form>
+                <div id="searchTxt" class="searchTxt">
+
+
+                    <div class="searchMenu">
+
+                        <div class="searchSelected" id="searchSelected">玄幻</div>
+
+                        <div style="display:none;" class="searchTab" id="searchTab">
+
+                            <ul>
+                                <li class="">玄幻</li>
+                                <li>奇幻</li>
+                                <li>武侠</li>
+                                <li>仙侠</li>
+                                <li>都市</li>
+                                <li>现实</li>
+                                <li>军事</li>
+                                <li>历史</li>
+                                <li>游戏</li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <input name="w" type="text"/>
+                    <div class="searchBtn">
+                        <button id="searchBtn" type="submit">搜索</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="user">
+            {% if request.user.is_authenticated %}
+                <font><a href="/book/bookrack.html">收藏&nbsp;&nbsp;&nbsp;|</a></font>
+                <font><a href="/user/site.html">{{ request.user.username }}的个人中心</a></font>
+            {% else %}
+                <font><a href="/user/login.html">登录&nbsp;&nbsp;&nbsp;|</a></font>
+                <font><a href="/user/register.html">注册</a></font>
+            {% endif %}
+
+
+        </div>
+    </div>
+
+
+    <div id="Logo">
+        <ul>
+            <li class="first"><span class="iconfont">&#xe627;</span>全部小说分类</li>
+            <li><a href="/" title="首页">首页</a></li>
+            <li><a href="#" title="魂帝武神">魂帝武神</a></li>
+            <li><a href="#">万古第一帝</a></li>
+            <li><a href="#">绝世弃少</a></li>
+            <li><a href="#">谋断九州</a></li>
+            <li><a href="#">天命修罗</a></li>
+            <li><a href="#">紫阳</a></li>
+            <li class="last"></li>
+        </ul>
+    </div>
+    <!--主体-->
+
+    <div id="Foucs">
+        <div class="FoucsCommon">
+            <div class="Menu">
+                <ul>
+                     <li>
+                        <h3><a href="" style="color: yellow">玄幻小说</a></h3>
+                        <p><a href="/book/1.html">盗墓笔记</a><a href="">星辰变</a><a href="">归一</a></p>
+                        <div class="moreNav"></div>
+                        <div class="border_top"></div>
+                        <div class="border_bottom"></div>
+                        <div class="border_right"></div>
+
+                    </li>
+                    <li>
+                        <h3><a href="" style="color: yellow">都市小说</a></h3>
+                        <p><a href="">狂少</a><a href="">校花的贴身高手</a></p>
+                        <div class="moreNav">
+
+
+                        </div>
+                        <div class="border_top"></div>
+                        <div class="border_bottom"></div>
+                        <div class="border_right"></div>
+                    </li>
+
+                    <li>
+                        <h3><a href="" style="color: yellow">仙侠小说</a></h3>
+                        <p><a href="">我的民国生涯</a><a href="">明朝那些事</a></p>
+                        <div class="moreNav"></div>
+                        <div class="border_top"></div>
+                        <div class="border_bottom"></div>
+                        <div class="border_right"></div>
+                    </li>
+                    <li>
+                        <h3><a href="" style="color: yellow">科幻小说</a></h3>
+                        <p><a href="">一起扛过枪</a><a href="">不倒的军旗</a></p>
+                        <div class="moreNav">
+                        </div>
+                        <div class="border_top"></div>
+                        <div class="border_bottom"></div>
+                        <div class="border_right"></div>
+                    </li>
+                    <li>
+                        <h3><a href="" style="color: yellow">游戏小说</a></h3>
+                        <p><a href="">七宗罪</a><a href="">深夜书屋</a><a href="">虫屋</a></p>
+                        <div class="moreNav"></div>
+                        <div class="border_top"></div>
+                        <div class="border_bottom"></div>
+                        <div class="border_right"></div>
+                    </li>
+                    <li>
+                        <h3><a href="" style="color: yellow">历史小说</a></h3>
+                        <p><a href="">飞剑问道</a><a href="">三寸人间</a><a href="">道君</a></p>
+                        <div class="moreNav"></div>
+                        <div class="border_top"></div>
+                        <div class="border_bottom"></div>
+                        <div class="border_right"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="book-information cf" data-l1="2" id="info">
+
+
+                <div class="book-img">
+                    <a class="J-getJumpUrl" id="bookImg"
+                       href="//read.qidian.com/chapter/nTjeEvGj44M1/sicxPCtPFYWaGfXRMrUjdw2"
+                       data-eid="qd_G09" data-bid="3679158"
+                       data-firstchapterjumpurl="//read.qidian.com/chapter/nTjeEvGj44M1/sicxPCtPFYWaGfXRMrUjdw2"><img
+                            src="/media/{{ book.book_cover }}"></a>
+                </div>
+
+                <div class="book-info ">
+                    <h1>
+
+                        <em>{{ book.book_title }}</em>
+                        <span><a class="writer" href="//me.qidian.com/authorIndex.aspx?id=3503784" target="_blank"
+                                 data-eid="qd_G08">{{ book.authors }}</a> 著</span>
+
+                    </h1>
+                    <p class="tag"><span class="blue">完本</span>
+
+                        <span class="blue">签约</span>
+
+
+                        <span class="blue">VIP</span>
+
+                        <a href="//www.qidian.com/dushi" class="red" target="_blank" data-eid="qd_G10">都市</a>
+
+
+                        <a href="//www.qidian.com/all?chanId=4&amp;subCateId=74" class="red" target="_blank"
+                           data-eid="qd_G11">异术超能</a>
+
+
+                    </p>
+
+                    <p class="intro">{{ book.book_brief }}</p>
+
+            <!--轮播图>
+
+->
+
+
+
+
+        </div>
+    </div>
+    <!--主体结束-->
+
+</html>

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <style>
+        .container{
+            opacity: 0.8!important;
+            background-color: #f7f6f2;
+        }
+        .container:hover {
+            opacity: 1 !important;
+
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container" >
+        <br>
+        {% for book_obj in book_query %}
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="/media/{{ book_obj.book_cover }}" alt="" style="width: 150px;height: 200px">
+                </div>
+                <div class="col-md-10">
+                    <div style="color: brown;font-size: 22px">{{ book_obj.book_title }}&nbsp;&nbsp;{{ book_obj.authors }}&nbsp;著</div>
+                    <div style="font-size: 16px;color: #2129ff">作品分类: {{ book_obj.book_category.category_name }}</div>
+                    <br>
+                    <div style="font-size: 14px;color: rgba(11,165,139,0.99)">作品详情: {{ book_obj.book_brief }}</div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="">
+                        <a href="/book/section/{{ book_obj.pk }}//.html">
+                            <button class="btn btn-primary">开始阅读</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+{% block js %}
+
+
+{% endblock %}
+
+
+

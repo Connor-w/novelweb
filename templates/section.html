@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html class="">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/media/static/images/sm_log.png" type="image/x-icon"/>
+    <title>{{ section_obj.book.book_title }}_{{ section_obj.section }}</title>
+
+    <meta name="description"
+          content="{{ section_obj.book.book_title }}最新章节阅读，{{ section_obj.book.book_title }}是一部{{ section_obj.book.book_category.category_name }}小说,由{{ section_obj.book.authors }}创作,c享提供首发更新。第五十二章 搜集天下秘籍({{ section_obj.book.create_time }})">
+    <meta name="keywords"
+          content="{{ section_obj.book.book_title }},最新,最新章节,{{ section_obj.book.book_category.category_name }}小说,阅读">
+    <meta name="robots" content="all">
+    <meta name="googlebot" content="all">
+    <meta name="baiduspider" content="all">
+    <meta http-equiv="mobile-agent" content="format=wml; url=http://m.qidian.com/book/1016006387/480714789">
+    <meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.qidian.com/book/1016006387/480714789">
+    <meta http-equiv="mobile-agent" content="format=html5; url=http://m.qidian.com/book/1016006387/480714789">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+            src="http://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("/media/static/漫画.jpg") !important;
+            background-repeat: no-repeat;
+            background-attachment: fixed !important;
+
+        }
+
+        .content {
+            background-color: #caffd8;
+
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 500px;
+            height: 650px;
+            position: fixed;
+            top: 119px;
+            left: 425px;
+            right: 200px;
+            text-align: left;
+            font-size: 20px;
+            z-index: 10000 !important;
+            display: none;
+            overflow: scroll;
+
+        }
+
+        .shouqian {
+            background-color: #caffd8;
+
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 700px;
+            height: 700px;
+            position: fixed;
+            margin-left: 50px;
+            top: 119px;
+            left: 425px;
+            right: 200px;
+            text-align: left;
+            font-size: 20px;
+            z-index: 10000 !important;
+            display: none;
+
+
+        }
+    </style>
+    <script>
+        // 获取cookie
+
+
+    </script>
+    <script>
+        document.domain = 'qidian.com';
+    </script>
+    <script>
+
+    </script>
+
+    <script>
+        //遇到cookie tf=1的话留在本站，否则跳转移动站
+
+        // start 防劫持
+        //设置cookie
+
+
+        //获取cookie
+
+
+        //创建并发送请求
+
+    </script>
+
+    {#    <link data-ignore="true" rel="shortcut icon" type="image/x-icon"#}
+    {#          href="//qidian.gtimg.com/qd/favicon/qd_icon.c443c.ico">#}
+    {#    <link data-ignore="true" rel="Bookmark" type="image/x-icon" href="//qidian.gtimg.com/qd/favicon/qd_icon.c443c.ico">#}
+
+
+    <link rel="stylesheet" data-ignore="true"
+          href="//qidian.gtimg.com/c/=/qd/css/lbfUI/css/icon.a578d.css,/qd/css/lbfUI/css/Drag.41d31.css,/qd/css/lbfUI/css/Checkbox.ef549.css,/qd/css/reset.ddecf.css,/qd/css/global.d41d8.css,/qd/css/font.1727c.css,/qd/css/module.89faa.css,/qd/css/footer.5ccc0.css,/qd/css/read.53ab2.css,/qd/css/review.4be21.css,/qd/css/emoji.3b60e.css,/qd/css/layout.5de0f.css,/qd/css/qd_popup.ed72c.css,/qd/css/book_popup.18f47.css,/qd/css/vote_popup.3844d.css"/>
+
+</head>
+<body class="theme-0 ">
+
+<div class="read-header" id="readHeader" data-l1="40" style="z-index: 1000;background-color: #caffd8;opacity: 0.9">
+    <div class="wrap-center cf">
+        <div class="left-nav fl">
+
+            <ul>
+                <li class="site" data-l2="1">
+                    <div class="logo" style="padding-top: 15px;padding-left: -5px"><a href="#"><img
+                            src="/media/static/images/big_logo.png" width="140px"
+                            height="35px"/></a>
+                    </div>
+
+                </li>
+                <li class="app" data-l2="2">
+                    <cite><a href="/">首页</a></cite>
+                    <div class="dropdown scan-app hidden">
+                        <div class="box">
+                            <h3>扫描下载c享读书客户端</h3>
+                            <img src="//qidian.gtimg.com/qd/images/qd_qrcode.f4f94.png">
+                            <a href="https://itunes.apple.com/cn/app/id534174796?mt=8" target="_blank"
+                               data-eid="qd_R05"><em class="iconfont">&#xe64c;</em>App store 下载</a>
+                            <a href="http://download.qidian.com/apknew/source/QDReader.apk" target="_blank"
+                               data-eid="qd_R06"><em class="iconfont">&#xe64a;</em>Android 下载</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="j_nearRead" data-l2="3">
+                    <cite>最近阅读</cite>
+                </li>
+                <li class="quick-nav" data-l2="4">
+                    <cite><i class="iconfont">&#xe661;</i>快速导航</cite>
+                    <div class="dropdown type-list">
+                        <div class="type-box">
+                            <h3>分类频道</h3>
+                            <a href="//www.qidian.com/xuanhuan" data-eid="qd_R13"
+                               target="_blank">{{ section_obj.book.book_category.category_name }}</a>
+                            <a href="//www.qidian.com/qihuan" data-eid="qd_R14" target="_blank">奇幻</a>
+                            <a href="//www.qidian.com/wuxia" data-eid="qd_R15" target="_blank">武侠</a>
+                            <a href="//www.qidian.com/xianxia" data-eid="qd_R16" target="_blank">仙侠</a>
+                            <a href="//www.qidian.com/dushi" data-eid="qd_R17" target="_blank">都市</a>
+                            <a href="//www.qidian.com/xianshi" data-eid="qd_R18" target="_blank">现实</a>
+                            <a href="//www.qidian.com/lishi" data-eid="qd_R20" target="_blank">历史</a>
+                            <a href="//www.qidian.com/junshi" data-eid="qd_R19" target="_blank">军事</a>
+                            <a href="//www.qidian.com/youxi" data-eid="qd_R21" target="_blank">游戏</a>
+                            <a href="//www.qidian.com/tiyu" data-eid="qd_R22" target="_blank">体育</a>
+                            <a href="//www.qidian.com/kehuan" data-eid="qd_R23" target="_blank">科幻</a>
+                            <a href="//www.qidian.com/lingyi" data-eid="qd_R24" target="_blank">悬疑</a>
+                            <a href="//www.qidian.com/2cy" class="ecy" data-eid="qd_R26" target="_blank"> 轻小说</a>
+                            <a href="//www.qidian.com/finish" data-eid="qd_R27" target="_blank">完本</a>
+                            <a href="//www.qdmm.com" data-eid="qd_R25" target="_blank">女生</a>
+                            <a href="//www.qidian.com/book/sanjiang" data-eid="qd_R28" target="_blank">三江</a>
+                        </div>
+                        <div class="type-box">
+                            <h3>其它</h3>
+                            <a href="//write.qq.com/college" data-eid="qd_R29" target="_blank">投稿</a>
+                            <a href="//wwwploy.qidian.com/HelpCenter/default.aspx?type=0&categoryid=58&parentid=53"
+                               data-eid="qd_R30" target="_blank">签约</a>
+                            <a href="//wwwploy.qidian.com/ploy/20150520qdsp/theme1.htm" data-eid="qd_R31"
+                               target="_blank">福利</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="read-login fr">
+            <ul>
+                <li id="min-search" data-l2="5">
+                    <form action="//www.qidian.com/search" method="get" target="_blank">
+                        <input class="submit-input" type="submit" id="searchSubmit" data-eid="qd_R32">
+                        <input id="pin-input" class="pin-input hide" name="kw" type="text" placeholder="英雄无敌之亡灵法神">
+                        <label id="pin-search" for="searchSubmit" data-eid="qd_R32"><em class="iconfont"></em></label>
+                    </form>
+                </li>
+                <li class="line"></li>
+                <li class="sign-out" data-l2="6">
+                    <a id="pin-login" href="javascript:" data-eid="qd_R33">登录</a>
+                    <a class="reg"
+                       href="//passport.qidian.com/reg.html?appid=10&areaid=1&target=iframe&ticket=1&auto=1&autotime=30&returnUrl=http%3A%2F%2Fwww.qidian.com"
+                       target="_blank" data-eid="qd_R34">注册</a>
+                </li>
+                <li class="sign-in hidden" data-l2="6">
+                    <a href="//me.qidian.com/Index.aspx" target="_blank" data-eid="qd_R36"><i
+                            id="nav-user-name"></i><span></span></a>
+                    <div class="dropdown">
+                        <a href="//me.qidian.com/profile/info.aspx" target="_blank" data-eid="qd_R37">账户设置</a>
+                        <a href="//me.qidian.com/account/info.aspx" target="_blank" data-eid="qd_R38">账务中心</a>
+                        <a href="//me.qidian.com/author/authorDoor.aspx" target="_blank" data-eid="qd_R39">作家专区</a>
+                        <a id="exit" href="javascript:" data-eid="qd_R40">退出</a>
+                    </div>
+                </li>
+                <li data-l2="6"><a href="//www.qidian.com/charge/meRedirect" target="_blank" data-eid="qd_R35">充值</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="wrap">
+    <div id="j_bodyRecWrap" class="hidden"></div>
+    <div class="crumbs-nav" data-l1="1">
+
+        <a href="//www.qidian.com" target="_blank" data-eid="qd_G01">首页</a><em class="iconfont">&#xe621;</em>
+        <a href="//www.qidian.com/xuanhuan" target="_blank" data-chanid="21" id="j_chanId"
+           data-eid="qd_G02">{{ section_obj.book.book_category.category_name }}</a><em class="iconfont">&#xe621;</em>
+        <a href="//www.qidian.com/all?chanId=21&subCateId=78" target="_blank">高武世界</a><em class="iconfont">&#xe621;</em>
+
+        <a class="act" href="//book.qidian.com/info/1016006387" target="_blank" id="bookImg"
+           data-bid="1016006387">{{ section_obj.book.book_title }}</a>
+    </div>
+    <div class="main-read-container" id="j-mainReadContainer">
+        <div v-cloak v-if="isReviewSidebarVisible" class="section-comment-container" id="paragraph-review-app">
+            <div class="section-comment-wrap" :class="{fixed:isScrolled,bottomed:isBottom}">
+                <a class="iconfont close-panel" @click="closeReviewSidebar" href="javascript:">&#xe61f;</a>
+                <div class="section-comment-content">
+                    <div class="send-textarea">
+                        <textarea placeholder="有想法快写下来吧···" id="j-sendTextArea" autofocus v-model="newReplyContent"
+                                  ref="inputEmoji"></textarea>
+                        <div class="text-tools">
+                            <a class="red-btn" :class="{disabled:disableSubmit}" @click="sendSectionComment"
+                               href="javascript:">发表</a>
+
+                            <i><em id="j-sendCommentCounter"
+                                   :class="{red:realReplyContent.length>maxLength}">{{ realReplyContent.length }}</em>/{{ maxLength }}
+                            </i>
+                        </div>
+                    </div>
+                    <div class="reviews-wrap">
+                        <div class="total">
+                            <p>共{{ commentTotal }}条帖子</p>
+                        </div>
+                        <div class="review-wrap-list" id="j-reviewWrapList" v-if="!isNoData">
+                            <ul>
+                                <review class="review-item"
+                                        v-for="(r, index) in reviews"
+                                        :key="r.reviewId"
+                                        mode="1"
+                                        @show-replies="showRepliesModal(r,$event)"
+                                        user-path="https://my.qidian.com/user/"
+                                        like-path="/ajax/chapterReview/userInteract"
+                                        delete-path="/ajax/chapterReview/delReview"
+                                        reply-path="/ajax/chapterReview/createSegmentReply"
+                                        @require-login="showLoginPopup"
+                                        @confirm-delete="showDeleteConfirm"
+                                        @delete="deleteReviewSuccess(index)"
+                                        @require-verification="showBindPhonePopup"
+                                        :review-raw="r"
+                                >
+                                </review>
+                                <load-more :loading="reviewIsLoading && !isShowMorePage" :hidden="reviewIsEnd"
+                                           @visible="getReviewData"></load-more>
+                            </ul>
+                            <div class="is-end" v-if="reviewIsEnd && !isNoData && !isShowMorePage">
+                                <p>已显示全部</p>
+                            </div>
+
+                            <div class="more-page-box" v-show="isShowMorePage">
+                                <div class="pagination" id="j-morePageBox" :data-page="reviewCurPage"
+                                     :data-pageMax="reviewPageMax"></div>
+                            </div>
+                        </div>
+                        <div v-else class="no-section-data">
+                            <div class="icon files"></div>
+                            <p>还没有人发表评论</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-replies-modal-bg" v-if="isRepliesModalShow"></div>
+            <div v-if="isRepliesModalShow" class="review-replies-modal" id="review-replies-modal">
+                <div class="review-replies-popup">
+                    <a class="iconfont close-btn" @click="closeReviewRepliesPopup" href="javascript:">&#xe61f;</a>
+                    <h3>查看回复</h3>
+                    <review
+                            mode="2"
+                            user-path="https://my.qidian.com/user/"
+                            like-path="/ajax/chapterReview/userInteract"
+                            delete-path="/ajax/chapterReview/delReview"
+                            reply-path="/ajax/chapterReview/createSegmentReply"
+                            @delete="deleteMineReplies"
+                            @reply="replySuccess"
+                            @confirm-delete="showDeleteTopConfirm"
+                            @require-login="showLoginPopup"
+                            @success="showSuccessTip"
+                            @error="showErrorTip"
+                            :is-root="true"
+                            :review-raw="targetReview"
+                            @require-verification="showBindPhonePopup"
+                    ></review>
+                    <div class="replies-list-wrap" id="j-repliesListWrap">
+                        <div class="replies-ul" v-if="!isNoRepliesData">
+                            <review
+                                    v-for="(r, index) in replies"
+                                    :key="r.reviewId"
+                                    mode="2"
+                                    user-path="https://my.qidian.com/user/"
+                                    like-path="/ajax/chapterReview/userInteract"
+                                    delete-path="/ajax/chapterReview/delReview"
+                                    reply-path="/ajax/chapterReview/createSegmentReply"
+                                    @delete="deleteReplySuccess(index)"
+                                    @reply="replySuccess"
+                                    @confirm-delete="showDeleteConfirm"
+                                    @require-login="showLoginPopup"
+                                    @send-param="reportSendParam"
+                                    @error="showErrorTip"
+                                    :review-raw="r"
+                            ></review>
+                            <load-more :loading="repliesIsLoading" :hidden="repliesIsEnd"
+                                       @visible="getPageNextReplies"></load-more>
+                        </div>
+                        <div v-else class="no-section-data">
+                            <div class="icon files"></div>
+                            <p>还没有人发表评论</p>
+                        </div>
+                        <div class="is-end" v-if="repliesIsEnd && !isNoRepliesData">
+                            <p>已显示全部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="read-main-wrap font-family01" style="font-size:18px" id="j_readMainWrap">
+            <div id="j_chapterBox" data-l1="3">
+
+
+                <div class="text-wrap" id="j_textWrap" data-cid="480714789">
+                    <div class="read-container">
+                        <div class="book-cover-wrap">
+                            <div class="book-photo">
+                                <img src="/media/{{ section_obj.book.book_cover }}">
+                            </div>
+                            <h1>{{ section_obj.book.book_title }}</h1>
+
+                            <h2><a href="//me.qidian.com/authorIndex.aspx?id=402957234"
+                                   target="_blank">{{ section_obj.book.authors }}</a>著</h2>
+
+                            <div class="info-list cf">
+                                <ul style="margin-left: -57px !important;">
+                                    <li><p>{{ section_obj.book.book_category.category_name }}</p><span>类型</span></li>
+                                    <li><em>{{ section_obj.book.create_time }}</em><span>上架</span></li>
+                                    <li><p id="ballot"><em>{{ section_obj.book.ballot }}</em>票</p><span>得票（）</span></li>
+                                </ul>
+                            </div>
+                            <h3>
+                                与<span>1.1万</span>位书友共同开启《{{ section_obj.book.book_title }}》的{{ section_obj.book.book_category.category_name }}之旅
+                            </h3>
+                            <h4>
+
+                                <em>「</em>学徒<em>」</em><a href="//me.qidian.com/friendIndex.aspx?id=330056854"
+                                                         target="_blank">杯酒独余醉</a>
+
+                                <em>「</em>学徒<em>」</em><a href="//me.qidian.com/friendIndex.aspx?id=317691387"
+                                                         target="_blank">谟路</a>
+
+                            </h4>
+
+
+                            <h5>本书由c享中文网进行电子制作与发行</h5>
+
+                            <h6>&copy;版权所有 侵权必究</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="text-wrap" id="chapter-480714789" data-cid="480714789" data-purl="javascript:void(0);"
+                     data-nurl="//read.qidian.com/chapter/b3TbYj8n9OAmPxgcqNL9uQ2/oWvFfx-FyVGaGfXRMrUjdw2"
+                     data-info="0|-1|481498635|0|0">
+                    <div class="main-text-wrap">
+                        <div class="text-head">
+                            <div class="guide-box">
+                                <cite></cite>
+                                <p>点击书签后，可收藏每个章节的书签，“阅读进度”可以在个人中心书架里查看</p>
+                            </div>
+                            <a class="book-mark" href="javascript:" title="书签" data-cid="480714789"
+                               data-bid="1016006387" data-auid="402957234" data-eid="qd_R104"></a>
+                            <h3 class="j_chapterName">
+                                <span class="content-wrap">{{ section_obj.section }}</span>
+                            </h3>
+                            <div class="text-info cf">
+                                <div class="info fl">
+                                    <a href="//book.qidian.com/info/1016006387" target="_blank" data-bid="1016006387"
+                                       data-auid="402957234" data-eid="qd_R102"><em
+                                            class="iconfont">&#xe60c;</em>{{ section_obj.book.book_title }}</a>
+
+                                    <a href="//me.qidian.com/authorIndex.aspx?id=402957234" target="_blank"
+                                       data-bid="1016006387" data-auid="402957234" data-eid="qd_R103"><em
+                                            class="iconfont">&#xe650;</em>{{ section_obj.book.authors }}</a>
+
+                                    <i><em class="iconfont">&#xe64f;</em><span class="j_chapterWordCut">2392</span>字</i>
+                                    <i><em class="iconfont">&#xe653;</em><span
+                                            class="j_updateTime">2019.07.31 20:11</span></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="myText" class="read-content j_readContent">
+
+            <pre style="word-wrap: break-word; white-space: pre-wrap; white-space: -moz-pre-wrap">
+            </pre>
+
+
+                        </div>
+
+                        <div class="admire-wrap">
+                            <!-- <a class="report-btn j_reportBtn" href="javascript:" data-eid="qd_R106"><em class="iconfont">&#xe657;</em>举报</a> -->
+                            <a class="report-btn" id="j_reportBtn"
+                               href="//www.qidian.com/ajax/chapter/reportChapter?siteId=1&bookId=1016006387&chapterId=480714789"
+                               data-eid="qd_R106"><em class="iconfont">&#xe657;</em>举报</a>
+                            <script>
+                                (function () {
+                                    function getCookie(name) {
+                                        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                                        if (match) return match[2];
+                                    }
+
+                                    document.getElementById('j_reportBtn').href += ('&_csrfToken=' + getCookie('_csrfToken'))
+                                })()
+                            </script>
+
+                            {#    评论样式开始#}
+                            <div>
+                                <p><span class="glyphicon glyphicon-comment"></span>发表评论</p>
+                                <p>
+                                    昵称:<input type="text" id="tbCommentAuthor" class="author" disabled="disabled"
+                                              size="50"
+                                              value="{{ request.user.username }}">
+                                </p>
+                                <p>评论内容:</p>
+                                <p>
+                                    <textarea name="" id="id_comment" cols="60" rows="10"></textarea>
+                                </p>
+                                <p>
+                                    <input type="button" class="btn btn-primary" value="提交评论" id="id_submit">
+                                </p>
+                            </div>
+
+                            {#    评论样式结束#}
+                            <div class="read-btn-box">
+                                <a class="admire lang j_admireBtn" href="javascript:" data-showtype="3"
+                                   data-eid="qd_R105">评论<span class="j_admireNum"></span></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                {#    评论楼渲染开始#}
+                {#    #51楼 2018-12-05 15:50 漏网的小鱼  #}
+                <h4>评论列表:</h4>
+                <ul class="list-group">
+                    {% for comment in page_queryset %}
+                        <li class="list-group-item">
+                            <div>
+                                <span>#{{ forloop.counter }}楼</span>
+                                <span>{{ comment.create_time|date:'Y-m-d' }}</span>
+                                <span><a href="/{{ comment.user.username }}/">{{ comment.user.username }}</a></span>
+                                <span class="pull-right reply" username="{{ comment.user.username }}"
+                                      comment_id="{{ comment.pk }}"><a>回复</a></span>
+                            </div>
+                            {% if comment.parent %}
+                                <p><a href="#">@</a>{{ comment.parent.user.username }}</p>
+                            {% endif %}
+                            {{ comment.content }}
+                        </li>n
+                    {% endfor %}
+                    {{ page_obj.page_html|safe }}
+                </ul>
+
+            </div>
+
+            <div class="chapter-control dib-wrap" data-l1="3">
+
+                <a href="/book/section/{{ book_obj.pk }}/{{ section_obj.pk }}/0.html"
+                   style="z-index: 1000000000 !important;" id="my_ids">上一章</a><span>|</span>
+                <a href="/home/index.html" target="_blank"
+                   data-eid="qd_R108">目录</a><span>|</span>
+                <a href="/book/section/{{ book_obj.pk }}/{{ section_obj.pk }}/1.html"
+                   style="z-index: 1000000000 !important;" id="my_id">下一章</a>
+
+            </div>
+
+            <div class="la-ball-pulse j_chapterLoad hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="float-wrap" id="j_floatWrap" data-l1="2">
+    <div class="left-bar-list" id="j_leftBarList">
+        <dl>
+            <dd id="j_navCatalogBtn" data-eid="qd_R42" class="bbb">
+                <a href="javascript:"><i><em class="iconfont">&#xe619;</em><span>目录</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    目录
+                </div>
+            </dd>
+            <dd id="j_navSettingBtn">
+                <a href="javascript:"><i><em class="iconfont">&#xe65b;</em><span>设置</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    设置
+                </div>
+                <div class="new-guide" id="j-sectionCommentGuide">
+                    <cite></cite>
+                    <p>段评功能已上线，<br>在此处设置开关</p>
+                </div>
+            </dd>
+            <dd id="j_phoneRead" data-eid="qd_R83">
+                <a href="javascript:"><i><em class="iconfont">&#xe65c;</em><span>手机</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    手机阅读
+                </div>
+            </dd>
+            <dd data-eid="qd_R84" id="shujia">
+                <a class="add-book" href="javascript:" data-bookid="1016006387"><i><em
+                        class="iconfont">&#xe654;</em><span>书架</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    加入书架
+                </div>
+            </dd>
+            <dd data-eid="qd_R85">
+                <a href="//book.qidian.com/info/1016006387" target="_blank"><i><em class="iconfont">&#xe652;</em><span>书页</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    返回书页
+                </div>
+            </dd>
+            <dd id="j_navGameBtn" data-eid="qd_R86">
+
+                <a href="javascript:"><i><em class="iconfont">&#xe65e;</em><span>游戏</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    c享游戏
+                </div>
+            </dd>
+
+        </dl>
+    </div>
+    <div class="right-bar-list" id="j_rightBarList">
+        <div id="msg" style="color: black"></div>
+        <dl>
+            <dd id="navTicket" data-showtype="2" data-aid="qd_R88">
+                <a href="javascript:"><i><em class="iconfont">&#xe65d;</em><span>投票</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    投票
+
+                </div>
+
+            </dd>
+            <dd id="navReward" data-showtype="3" data-aid="qd_R87">
+                <a href="javascript:"><i><em class="iconfont">&#xe635;</em><span>打赏</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    打赏
+                </div>
+            </dd>
+
+
+            <dd id="j_discussHref" data-eid="qd_R89">
+
+                <a href="#" target="_blank"><i><em class="iconfont">&#xe658;</em><span>查看评论</span></i></a>
+                <div class="guide-box">
+                    <cite></cite>
+                    查看评论
+                </div>
+            </dd>
+
+            <dd class="go-top" id="j_goTop" title="返回顶部" data-eid="qd_R90">
+                <a href="javascript:"><i><em class="iconfont">&#xe651;</em></i></a>
+            </dd>
+
+        </dl>
+    </div>
+    <div class="guide-btn-wrap">
+        <a class="guide-btn" id="j_guideBtn" href="javascript:" data-eid="qd_R41">指南</a>
+    </div>
+</div>
+{#目录弹出框#}
+<div style="display: none" class="shouqian">
+    <img src="/media/static/img/收钱码.jpg" alt="" width="100%">
+</div>
+<div class="content">
+    {#    i=1#}
+    {% for obj in section_obj_lis %}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/book/section/{{ book_obj.pk }}/{{ obj.pk }}/.html">{{ obj.section }}</a>
+        <br>
+
+        {#        {% if i%5==0 %}#}
+        {#            <br>#}
+        {#        {% endif %}#}
+        {#        i=i+1#}
+    {% endfor %}
+</div>
+<div id="userLevel" class="hidden"></div>
+<div id="authorId" data-authorid="402957234" class="hidden"></div>
+<script>
+    {#收钱码#}
+    var j = true;
+    $('#navReward').click(function () {
+
+        if (j) {
+            $('.shouqian').show();
+            j = false;
+        } else {
+            $('.shouqian').hide();
+            j = true;
+        }
+
+    });
+    $('#shujia').click(function () {
+        var url = "/book/book_rack/{{ section_obj.book.pk}}";
+        $.ajax({
+            url: url,
+            type: 'post',
+            success: function (data) {
+                console.log(data);
+
+                if (data.status == 100) {
+                    $('#ballot').text(data.code)
+                    window.alert(data.msg)
+                } else {
+
+                    window.alert(data.msg)
+                }
+
+            }
+        })
+    });
+    {#ajax投票#}
+    $('#navTicket').click(function () {
+        var url = "/book/vote/{{ section_obj.book.pk}}";
+        $.ajax({
+            url: url,
+            type: 'post',
+            success: function (data) {
+                console.log(data);
+                if (data.status == 100) {
+                    $('#ballot').text(data.code)
+                    $('#msg').text(data.msg)
+                } else {
+                    $('#msg').text(data.msg)
+
+                }
+
+            }
+        })
+    });
+
+    var v = true;
+    $('.bbb').click(function () {
+            if (v) {
+                $('.content').show();
+                v = false;
+            } else {
+                $('.content').hide();
+                v = true;
+            }
+        }
+    );
+
+    $('ppp').click(function () {
+
+        $('.content').hide();
+        $('ppp').addClass('bbb');
+        $('ppp').removeClass('ppp');
+
+    });
+
+
+    $('.iconfont').click(function () {
+        console.log(11111111)
+    })
+
+    var url = "/media/{{ section_obj.section_content}}";
+    $.ajax({
+        url: url,
+        async: false,
+        success: function (data) {
+            console.log(data);
+            $('#myText').html(data)
+        }
+    });
+
+    {#// 评论逻辑代码#}
+    {#// 定义一个全局的parantId变量名#}
+    {#var parentId = null;#}
+    {#$("#id_submit").click(function () {#}
+    {#    var comment = $('#id_comment').val();#}
+    {#    if (parentId) {#}
+    {#        // 将comment中的@人名清空掉#}
+    {#        // 先获取\n所在的索引值#}
+    {#        var nIndex = comment.indexOf('\n') + 1;  // 根据内容查索引#}
+    {#        comment = comment.slice(nIndex);#}
+    {#    }#}
+    {#    $.ajax({#}
+    {#        url: '/comment/',#}
+    {#        type: 'post',#}
+    {#        data: {#}
+    {#            'comment': comment,#}
+    {#            'article_id':{{ article_obj.pk }},#}
+    {#            'csrfmiddlewaretoken': '{{ csrf_token }}',#}
+    {#            'parent_id': parentId#}
+    {#        },#}
+    {#        success: function (data1) {#}
+    {#            if (data1.code == 2000) {#}
+    {#                // DOM操作渲染标签#}
+    {#                // 获取用户名#}
+    {#                var userName = '{{ request.user.username }}';#}
+    {#                // 获取评论内容#}
+    {#                var comment = $('#id_comment').val();#}
+    {#                // 动态生成li标签#}
+    {#                var tempStr = `#}
+    {#                    <li class="list-group-item">#}
+    {#                     <div>#}
+    {#                         <span class='glyphicon glyphicon-comment'></span><span>${userName}:</span>#}
+    {#                     </div>#}
+    {#                        ${comment}#}
+    {#                     </li>#}
+    {#                    `;#}
+    {#                // 查找url标签 将上面的字符串追加到ul标签内#}
+    {#                $('.list-group').append(tempStr);#}
+    {#                $('#id_comment').val('');#}
+    {#                parentId = null;#}
+    {#            }#}
+    {#        }#}
+    {#    })#}
+    {##}
+    {#});#}
+
+    // 点击回复按钮发生了下面三件事
+    $('.reply').click(function () {
+        // 获取当前回复按钮所对应的根评论的用户名
+        var userName = $(this).attr('username');
+        $('#id_comment').html('@' + userName + '\n').focus();  // .focus()自动获取焦点
+        // 将全局的parentId修改
+        parentId = $(this).attr('comment_id');
+    })
+
+</script>
+< /body>
+< /html>

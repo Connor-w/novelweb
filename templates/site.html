@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="/media/static/images/sm_log.png" type="image/x-icon"/>
+    <style>
+        #about {
+            background-image: url("/media/static/img/玄幻2.jpg");
+        }
+    </style>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="/media/static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="/media/static/css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- fonts-awesome icons -->
+    <link href="/media/static/css/fontsawesome-all.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+    <!-- //online-fonts -->
+</head>
+<body>
+    <div class="sidenav">
+		<div class="side_top">
+			<img src="/media/static/杨幂3.jpg" alt="news image" class="img-fluid navimg">
+			<h1> {{ request.user }} <br>优秀女演员<br>代表作:仙剑奇侠传</h1>
+		</div>
+		<!-- header -->
+		<header>
+			<div class="container-fluid px-lg-5 ">
+				<nav class="mnu mx-auto">
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop">
+						<ul class="menu">
+							<li class="active"><a href="/">首页</a></li>
+							 <li class="mt-sm-3"><a href="#about" class="scroll">个人简介</a></li>
+							 <li class="mt-sm-3"><a href="#gallery" class="scroll">我的壁纸</a></li>
+							<li class="mt-sm-3"><a href="#services" class="scroll">浏览记录</a></li>
+							<li class="mt-sm-3"><a href="#news" class="scroll">我的书架</a></li>
+                            <li class="mt-sm-3"><a href="#contact" class="scroll">上架申请</a></li>
+                        </ul>
+				</nav>
+			</div>
+		</header>
+    </div>
+    <div class="main" id="about">
+        <div class="banner-text-w3ls">
+            <div class="container">
+                <div class="mx-auto text-left">
+                    <h2>c享小说网
+					<br>个人简介</h2>
+					<p class="banp mt-5">夕瑶，由杨幂饰演，她是天上掌管神界神树的女神，亦是飞蓬在神界时异性好友，最后飞蓬因触犯天条被贬往人间，夕瑶悲痛不已，夕瑶对飞蓬深深的思念化为种子掉下人间，化为唐雪见，与飞蓬在人界的“景天”展开了一段惊天地泣鬼神的生死之恋。</p>
+					<a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#services" role="button">了解更多</a>
+                </div>
+            </div>
+        </div>
+		 <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container py-lg-5">
+           <h3 class="w3_head mb-5">我的壁纸</h3>
+			 <div class="row news-grids mt-lg-5 mt-4 text-center">
+                <div class="col-md-6 gal-img">
+                    <a href="#gal1"><img src="/media/static/img/宁.jpg" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 proj-1 gal-img">
+                    <a href="#gal2"><img src="/media/static/img/白浅.jpg" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 mt-5 gal-img">
+                    <a href="#gal3"><img src="/media/static/img/主题5.jpg" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 mt-5 gal-img">
+                    <a href="#gal4"><img src="/media/static/img/主题1.jpg" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 mt-5 gal-img">
+                    <a href="#gal5"><img src="/media/static/img/主题2.jpg" alt="news image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-6 mt-5 gal-img">
+                    <a href="#gal6"><img src="/media/static/img/主题3.jpg" alt="news image" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+        <!-- popup-->
+        <div id="gal1" class="pop-overlay animate">
+            <div class="popup">
+                <img src="/media/static/images/g2.jpg" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup -->
+
+        <!-- popup-->
+        <div id="gal2" class="pop-overlay animate">
+            <div class="popup">
+                <img src="/media/static/images/g3.jpg" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup -->
+        <!-- popup-->
+        <div id="gal3" class="pop-overlay animate">
+            <div class="popup">
+                <img src="/media/static/images/g4.jpg" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup3 -->
+        <!-- popup-->
+        <div id="gal4" class="pop-overlay animate">
+            <div class="popup">
+                <img src="/media/static/images/g5.jpg" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup -->
+        <!-- popup-->
+        <div id="gal5" class="pop-overlay animate">
+            <div class="popup">
+                <img src="/media/static/images/g6.jpg" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup -->
+        <!-- popup-->
+        <div id="gal6" class="pop-overlay animate">
+            <div class="popup">
+                <img src="/media/static/images/g7.jpg" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>
+        <!-- //popup -->
+    </section>
+    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<!-- services -->
+			<section class="slide-wrapper" id="services">
+                    <div class="services">
+					<h3 class="w3_head mb-5">Our Services</h3>
+					<div class="row service_w3top mt-5">
+                                <div class="col-lg-6">
+                                    <div class="d-flex services-box">
+                                        <div class="icon">
+                                            <span class="fa fa-pencil"></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content">
+                                            <h4>Inagittis Lacg</h4>
+                                            <p>
+                                                Quisque sagittis lacus eu lorem sodalesd vulputate velitdipisc inagittis lacg enean adipiscing.
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                    <!-- .Services-box ends here -->
+
+                                    <div class="d-flex services-box">
+                                        <div class="icon">
+                                            <span class="fa fa-rocket"></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content">
+                                            <h4>Velitdipisc Inagittis</h4>
+                                            <p>
+                                                Quisque sagittis lacus eu lorem sodalesd vulputate velitdipisc inagittis lacg enean adipiscing.
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                    <!-- .Services-box ends here -->
+                                </div>
+                                <!-- .Col ends here -->
+                                <div class="col-lg-6">
+                                    <div class="d-flex services-box">
+                                        <div class="icon">
+                                            <span class="fa fa-laptop"></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content">
+                                            <h4>Vulputate Velitdipisc</h4>
+                                            <p>
+                                                Quisque sagittis lacus eu lorem sodalesd vulputate velitdipisc inagittis lacg enean adipiscing.
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                    <!-- .Services-box ends here -->
+
+                                    <div class="d-flex services-box">
+                                        <div class="icon">
+                                            <span class="fa fa-paint-brush"></span>
+                                        </div>
+                                        <!-- .Icon ends here -->
+                                        <div class="service-content">
+                                            <h4>Sagittis Lacus</h4>
+                                            <p>
+                                                Quisque sagittis lacus eu lorem sodalesd vulputate velitdipisc inagittis lacg enean adipiscing.
+                                            </p>
+                                        </div>
+                                        <!-- .Service-content ends here -->
+                                    </div>
+                                    <!-- .Services-box ends here -->
+                                </div>
+                                <!-- .Col ends here -->
+                            </div>
+                            <!-- .Row ends here -->
+                        <!-- .Container ends here -->
+                    </div>
+                    <!-- .Services ends here -->
+                </section>
+			<!-- //services -->
+
+		<!-- news -->
+       <div class="news" id="news">
+		<div class="text-left">
+			<h3 class="w3_head mb-5">我的书架</h3>
+		</div>
+			<div class="row news-grids">
+                {% for obj in book_list %}
+                    <div class="col-lg-4 news-grids-left">
+					<div class="news_top">
+						<img src="/media/{{ obj.book_cover }}" style="height: 250px;width: 200px" alt="news image" class="img-fluid">
+						<h4><a href="/book/search/{{ obj.book_title }}.html">{{ obj.book_title }}</a></h4>
+						<p class="newsp">作者: &nbsp {{ obj.authors }} </p>
+					</div>
+				</div>
+                {% endfor %}
+
+
+
+
+			</div>
+			<a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#about" role="button">了解更多</a>
+		</div>
+<!-- //news -->
+<!-- contact -->
+	 <section class="wedo" id="contact">
+			<h3 class="w3_head mb-5">上架申请 </h3>
+		   <p class="banp mt-5"> 感谢您为本网站贡献作品,我们会尽快审核</p>
+		   <div class="row mt-4">
+			   <div class="col-lg-7 contact_grid_right">
+					<form action="#" method="post">
+						<div class="row contact_top">
+							<div class="col-sm-6">
+								<input type="text" name="Name" placeholder="作品名" required="">
+							</div>
+							<div class="col-sm-6">
+								<input type="email" name="Email" placeholder="您的邮箱" required="">
+							</div>
+						</div>
+
+							<textarea name="作品简介" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '作品简介...';}" required>作品简介...</textarea>
+							<input type="submit" class="btn" value="提交申请">
+					</form>
+				</div>
+				<div class="col-lg-5 contact_grid_left">
+				<h3 class="w3_head mb-5">联系小编 </h3>
+					<ul class="footer-bottom-list">
+							<li>
+								<span class="fa fa-map-marker"></span> 上海市
+								<span> 青浦区 老男孩</span>
+
+							</li>
+							<li>
+								<span class="fa fa-envelope"></span>
+								<a href="mailto:name@example.com"> mail@example.com</a>
+							</li>
+							<li>
+								<span class="fa fa-phone"></span> 电话: +143 367 436 2049 </li>
+							<li>
+								<span class="fa fa-fax"></span> qq: +166 367 808 5055 </li>
+							<li>
+								<span class="fa fa-globe"></span>
+								<a href="#"> www.connorshare.top</a>
+							</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cpy-right text-left">
+				<p>版权方:c享小说网-- <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">www.connorshare.top</a> -感谢 <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">与你同在</a>
+
+				</p>
+			</div>
+	</section>
+	 <!-- //contact -->
+    </div>
+
+</body>
+</html>
